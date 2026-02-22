@@ -1,0 +1,101 @@
+:root {
+  --bg-1: #0e2b3a;
+  --bg-2: #1d4653;
+  --text-main: #e8efe6;
+  --text-muted: #b6c6bf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: radial-gradient(circle at 20% 20%, #204658 0%, var(--bg-1) 45%, #09161d 100%);
+  color: var(--text-main);
+}
+
+#scene {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.title {
+  font-size: 1.25rem;
+  letter-spacing: 0.07em;
+}
+
+.subtitle,
+#status {
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.hidden {
+  display: none;
+}
+
+.win-screen {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(3, 10, 13, 0.68);
+  z-index: 20;
+}
+
+.win-screen.hidden {
+  display: none;
+}
+
+.win-card {
+  width: min(92vw, 420px);
+  border: 1px solid rgba(224, 239, 230, 0.35);
+  background: rgba(15, 34, 43, 0.92);
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.win-title {
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+}
+
+.win-text {
+  margin-top: 0.45rem;
+  color: var(--text-muted);
+}
+
+#restart-btn {
+  margin-top: 0.9rem;
+  border: 1px solid rgba(225, 241, 230, 0.5);
+  background: rgba(217, 236, 221, 0.12);
+  color: var(--text-main);
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  background: rgba(217, 236, 221, 0.2);
+}
